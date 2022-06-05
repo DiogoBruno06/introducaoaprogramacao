@@ -1,33 +1,34 @@
-LISTA = {
-    'FUNCIONARIO': 'Diogo',
-    'SALARIO' :'$ 9,500',
-    'CODIGO' :'14577',
-    'E-MAIL' :'diogo123@iesp.com',
-    'DATA' :'14/02/2020',
+nome = input('Digite o nome do Funcionario: ')
+data = input('Digite a sua data de admissão: ')
+codigo = input("Digite o seu codigo ")
+salario = input('Digite o seu salario: ')
+email = input('Digite o seu e-mail: ')
+dados= {
+    'Nome': nome,
+    'Data': data,
+    'Codigo': codigo,
+    'Salario': salario,
+    'Email': email
 }
-for x, i in LISTA.items():
-    print('{}:{}'.format(x,i))
-    print('-'*50)
-LISTA.update({'FUNCIONARIO': 'Messias,Diogo', 'E-MAIL' : 'messias123@iesp.com,diogo123@iesp.com'})
-for x, i in LISTA.items():
-    print('{}:{}'.format(x,i))
+print('CADASTRANDO DADOS...')
 print('-'*100)
-print('CADASTRANDO NOVOS DADOS...')
+for x,i in dados.items():
+    print('{}:{}'.format(x,i))
+print('-'*100)    
+novo = input('Digite o novo funcionario: ')
+dados= {
+    'Nome': nome,
+    'Data': data,
+    'Codigo': codigo,
+    'Salario': salario,
+    'Email': email
+}
+dados['Nome'] = nome,novo
+for x,i in dados.items():
+    print('{}:{}'.format(x,i))
+print('NOVO FUNCIONARIO CADASTRADO!!!!')
 print("-"*100)
 print('FUNCIONARIOS CADASTRADOS')
-print(LISTA['FUNCIONARIO'])
-print('-'*100)
-LISTA.update({'FUNCIONARIO': 'Messias', 'E-MAIL':'messias123@iesp.com'})
-for x ,i in LISTA.items():
-    print('{}:{}'.format(x,i))
-print('FUNCIONARIO EXCLUIDO COM SUCESSO...')
-print("-"*100)
-LISTA.update({'SALARIO':'$ 2,50'})
-print('AJUSTANDO SALARIO...')
-print('-'*100)
-for x, i in LISTA.items():
-    print('{}:{}'.format(x,i))
-print('-'*100)
-
-print('REGISTRO TERMINADO COM SUCESSO')
-print('GRUPO: DIOGO BRUNO MARQUES NEVES')
+print(dados['Nome'])
+del dados ['Nome']
+print(dados)
